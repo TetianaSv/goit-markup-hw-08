@@ -1,0 +1,59 @@
+.team {
+  display: flex;
+  &-main {
+    padding-top: 94px;
+    background-color: #f5f4fa;
+  }
+  &-name {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: $title-nav-color;
+    @include generalfont($line-height: 16px, $weight: 500, $size: 19px);
+  }
+  &-prof {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 16px;
+  }
+  &-img {
+    display: block;
+    margin-bottom: 30px;
+  }
+  &-item {
+    text-align: center;
+    @include generalfont($line-height: 16px, $weight: 400, $size: 19px);
+  }
+}
+.team-list {
+  padding-bottom: 24px;
+  background-color: $primary-white-color;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.social-links {
+  @include display;
+}
+.social-icon {
+  @include display;
+  background-size: contain;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: $client-logo-color;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    border-radius: 50%;
+    fill: $primary-white-color;
+    cursor: pointer;
+    transition: $transition;
+  }
+  & li:not(:last-child) {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,32 @@
+.filter {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  &-menu {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+  &-list:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+.filter-button {
+  padding: 6px 22px;
+  background: $background-color;
+  border: transparent;
+  border-radius: 4px;
+  color: $title-nav-color;
+  @include generalfont(
+    $line-height: 26px,
+    $weight: 500,
+    $size: 16px,
+    $letter-spacing: 0.03em
+  );
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-white-color;
+    cursor: pointer;
+    transition: $transition;
+  }
+}

@@ -1,0 +1,130 @@
+.footer {
+  background-color: $footer-backgroung;
+  color: $primary-white-color;
+  &-site {
+    @include display;
+    width: 1200px;
+    height: 193px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  & b {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  & .logo {
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+
+  &-connection {
+    flex-grow: 1;
+  }
+  &-follow {
+    flex-grow: 1;
+  }
+  &-mailing {
+    flex-grow: 2;
+  }
+  &-adress {
+    display: flex;
+    flex-direction: column;
+  }
+  & .logo-accent {
+    color: $primary-white-color;
+  }
+  & .adress-mail {
+    margin-bottom: 9px;
+    @include generalfont($line-height: 24px, $weight: 400, $size: 14px);
+    color: $footer-adress-color;
+    font-style: normal;
+  }
+  & .adress-tel {
+    color: $footer-adress-color;
+    @include generalfont($line-height: 24px, $weight: 400, $size: 14px);
+    font-style: normal;
+  }
+  &-text {
+    display: block;
+    text-transform: uppercase;
+  }
+  &-button {
+    width: 200px;
+    height: 50px;
+    margin-left: 10px;
+    @include display;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: $primary-white-color;
+    @include generalfont(
+      $line-height: 30px,
+      $weight: 900,
+      $size: 16px,
+      $letter-spacing: 0.06em
+    );
+    text-align: center;
+  }
+  & .socialnet {
+    margin-left: 10px;
+  }
+  &-copiright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 18px;
+    padding-bottom: 21px;
+
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    @include generalfont(
+      $line-height: 24px,
+      $weight: 400,
+      $size: 12px,
+      $letter-spacing: 0.03em
+    );
+  }
+  & .section {
+    padding-bottom: 0px;
+  }
+}
+.footer-links {
+  display: flex;
+  & li:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.footer-linkbox {
+  @include display;
+  background-color: $footer-linkbox-color;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: $primary-white-color;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    fill: $primary-white-color;
+    cursor: pointer;
+    transition: $transition;
+  }
+}
+.location {
+  margin-bottom: 9px;
+  @include generalfont($line-height: 24px, $weight: 400, $size: 14px);
+  font-style: normal;
+  color: $primary-white-color;
+}
+.feedback {
+  display: flex;
+  & input {
+    width: 358px;
+    height: 50px;
+    padding-left: 12px;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: $footer-adress-color;
+  }
+}
