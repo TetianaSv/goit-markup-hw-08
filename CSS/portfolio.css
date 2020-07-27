@@ -306,10 +306,6 @@ p {
   margin: 0;
 }
 
-button {
-  background-color: #2196f3;
-}
-
 section {
   width: 1200px;
   padding-bottom: 94px;
@@ -367,6 +363,18 @@ header {
   border-bottom: 1px solid #eeeeee;
 }
 
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  header {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1600px) {
+  header {
+    width: 768px;
+  }
+}
+
 .nav {
   padding-bottom: 0px;
   display: -webkit-box;
@@ -375,9 +383,21 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+.nav-conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0;
+  background-color: transparent;
+  border: none;
 }
 
 .logo {
@@ -429,6 +449,13 @@ header .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 301px;
 }
 
 .site-nav a {
@@ -522,10 +549,16 @@ header .auth-item:focus {
   margin-right: 10px;
 }
 
-.icon-phone {
-  width: 10px;
-  height: 15px;
-  margin-right: 10px;
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button .icon-cross.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button .icon-cross.is-open .icon-menu {
+  display: none;
 }
 
 .filter {
