@@ -367,6 +367,18 @@ header {
   border-bottom: 1px solid #eeeeee;
 }
 
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  header {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1600px) {
+  header {
+    width: 480px;
+  }
+}
+
 .nav {
   padding-bottom: 0px;
   display: -webkit-box;
@@ -375,9 +387,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .nav-conteiner {
@@ -441,6 +450,12 @@ header .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .site-nav a {

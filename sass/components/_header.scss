@@ -20,13 +20,20 @@ header {
   background-color: $primary-white-color;
   width: 100%;
   border-bottom: 1px solid $border-color;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1600px) {
+    width: 480px;
+  }
 }
 .nav {
   padding-bottom: 0px;
+  display: flex;
+  align-items: center;
+}
+.nav-conteiner {
   @include display;
-  &-conteiner {
-    @include display;
-  }
 }
 .logo {
   color: $accent-color;
@@ -40,7 +47,6 @@ header {
     margin-right: 85px;
   }
 }
-
 .current {
   color: $accent-color;
   &::after {
@@ -58,7 +64,6 @@ header {
 }
 .item {
   position: relative;
-
   & a:hover,
   & a:focus {
     color: $accent-color;
@@ -67,7 +72,7 @@ header {
   }
 }
 .site-nav {
-  display: flex;
+  @include display;
   & a {
     display: block;
     padding-top: 32px;
