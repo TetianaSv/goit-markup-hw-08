@@ -145,10 +145,10 @@ header {
 }
 .menu-button .icon-cross {
   display: none;
-  &.is-open .icon-cross {
-    display: block;
-  }
-  &.is-open .icon-menu {
-    display: none;
-  }
+}
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+.menu-button.is-open .icon-menu {
+  display: none;
 }
