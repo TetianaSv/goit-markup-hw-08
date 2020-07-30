@@ -1,12 +1,19 @@
 .customers {
-  padding-top: 94px;
+  display: block;
+  padding-top: 60px;
+  // padding-top: 94px;
   &-main {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+  }
+  &-list {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
   }
 }
 .customers-item {
-  width: 170px;
+  // width: 170px;
   height: 90px;
   @include display;
   border: 1px solid $client-logo-color;

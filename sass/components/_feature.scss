@@ -1,6 +1,9 @@
 .feature {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  // padding-top: 94px;
+  // padding-bottom: 94px;
+  display: block;
   &-list {
     @media screen and (max-widht: 768px) {
       display: flex;
@@ -8,15 +11,14 @@
   }
   &-main {
     display: block;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
     @media screen and (max-widht: 1148px) {
       width: calc((100% - 30px * 3) / 4);
     }
   }
-  @media screen and (max-widht: 480px) {
-    &-main:not(:last-child) {
-      margin-top: 30px;
-    }
-  }
+
   @media screen and (max-widht: 1148px) {
     &-main:not(:last-child) {
       margin-right: 30px;
