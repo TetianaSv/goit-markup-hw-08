@@ -19,41 +19,49 @@
           Web <span class="logo-accent">Studio</span>
         </a>
         <!--Conteiner for viewport tel-->
-        <div class="nav-conteiner">
-          <ul class="site-nav">
-            <li class="item">
-              <a class="nav-link current" href="./index.html">Студия</a>
-            </li>
-            <li class="item">
-              <a class="nav-link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="item">
-              <a class="nav-link" href="">Контакты</a>
-            </li>
-          </ul>
-          <!--Contacts-->
-          <address class="adress-nav">
-            <ul class="auth-nav">
-              <li class="auth-item item">
-                <a href="mailto:info@devstudio.com">
-                  <svg class="icon-mail">
-                    <use href="./images/symbol-defs.svg#icon-mail"></use>
-                  </svg>
-                </a>
-                info@devstudio.com
+    
+        <button data-menu-button aria-controls="menu-conteiner" aria-expanded="false " class="menu-button">
+          <svg class="icon-mobile-menu" width="40px" height="40px" aria-label="Переключатель мобильного меню">
+            <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
+            <use class="icon-cross" href="./images/symbol-defs.svg#icon-vector"></use>
+          </svg>
+        </button>
+        <div data-menu id="menu-conteiner" class="menu-conteiner">
+          <div class="nav-conteiner">
+            <ul class="site-nav">
+              <li class="item">
+                <a class="nav-link current" href="./index.html">Студия</a>
               </li>
-              <li class="auth-item item">
-                <a class="adress-tel" href="tel:+380961111111">
-                  <svg class="icon-phone">
-                    <use href="./images/symbol-defs.svg#icon-phone"></use>
-                  </svg>
-                </a>
-                +38 096 111 11 11
+              <li class="item">
+                <a class="nav-link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="item">
+                <a class="nav-link" href="">Контакты</a>
               </li>
             </ul>
+            <!--Contacts-->
+            <address class="adress-nav">
+              <ul class="auth-nav">
+                <li class="auth-item item">
+                  <a href="mailto:info@devstudio.com">
+                    <svg class="icon-mail">
+                      <use href="./images/symbol-defs.svg#icon-mail"></use>
+                    </svg>
+                  </a>
+                  info@devstudio.com
+                </li>
+                <li class="auth-item item">
+                  <a class="adress-tel" href="tel:+380961111111">
+                    <svg class="icon-phone">
+                      <use href="./images/symbol-defs.svg#icon-phone"></use>
+                    </svg>
+                  </a>
+                  +38 096 111 11 11
+                </li>
+              </ul>
+          </div>
+          </address>
         </div>
-    
-        </address>
       </nav>
     </header>
     <main>
@@ -371,5 +379,6 @@
         </p>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

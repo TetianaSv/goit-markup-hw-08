@@ -1,13 +1,15 @@
 .section {
-  width: 1200px;
+  // width: 1200px;
   padding-bottom: 94px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  @media screen and (max-width: 480px) {
+    width: 480px;
+  }
   &-title {
     text-align: center;
-    margin-top: 0px;
     margin-bottom: 50px;
     margin-left: auto;
     margin-top: auto;
@@ -16,11 +18,12 @@
   }
 }
 header {
+  position: relative;
   top: 0;
   background-color: $primary-white-color;
   width: 100%;
   border-bottom: 1px solid $border-color;
-  @media screen and (min-width: 480px) and (max-width: 767px) {
+  @media screen and (min-width: 480px) {
     width: 480px;
   }
   @media screen and (min-width: 768px) and (max-width: 1600px) {
@@ -30,9 +33,22 @@ header {
 .nav {
   padding-bottom: 0px;
   display: flex;
-  align-items: center;
-  &-conteiner {
-    display: flex;
+  @media screen and (max-width: 480px) {
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    position: relative;
+  }
+  &-link {
+    position: relative;
+    color: $title-nav-color;
+    @include generalfont(
+      $line-height: 16px,
+      $weight: 500,
+      $size: 14px,
+      $letter-spacing: 0.03em
+    );
+    transition: $transition;
   }
   & button {
     display: inline-flex;
@@ -41,7 +57,6 @@ header {
     border: none;
   }
 }
-
 .logo {
   color: $accent-color;
   @include logofont($size: 26px);
@@ -57,10 +72,11 @@ header {
 .current {
   color: $accent-color;
   &::after {
-    content: "";
+    content: " ";
     position: absolute;
     left: 0;
     bottom: 0;
+    margin-top: 8px;
 
     display: block;
     width: 100%;
@@ -70,7 +86,6 @@ header {
   }
 }
 .item {
-  position: relative;
   & a:hover,
   & a:focus {
     color: $accent-color;
@@ -79,17 +94,23 @@ header {
   }
 }
 .site-nav {
-  @include display;
-  margin-right: 301px;
-  & a {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    color: $title-nav-color;
-    @include generalfont;
+  margin-right: auto;
+  margin-left: auto;
+  // display: flex;
+  // align-items: center;
+  // margin-right: 301px;
+  // & a {
+  //   display: block;
+  //   padding-top: 32px;
+  //   padding-bottom: 32px;
+  //   color: $title-nav-color;
+  //   @include generalfont;
+  // }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 60px;
   }
   & .item + .item {
-    margin-left: 50px;
+    margin-top: 40px;
   }
 }
 .adress-nav {
@@ -100,28 +121,40 @@ header {
   @include generalfont;
 }
 .auth-nav {
-  display: flex;
-  & .item + .item {
-    margin-left: 30px;
+  @include display;
+  flex-direction: column;
+  @media screen and (max-width: 480px) {
+    & .item + .item {
+      margin-top: 16px;
+    }
+  }
+  @media screen and (mix-width: 1148px) {
+    display: flex;
+    & .item + .item {
+      margin-left: 30px;
+    }
   }
 }
 .auth-item {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 0px;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
   @include generalfont(
     $line-height: 16px,
     $weight: 500,
     $size: 14px,
     $letter-spacing: 0.03em
   );
-  font-style: normal;
   fill: $primary-text-color;
+  @media screen and (max-width: 480px) {
+    display: flex;
+  }
+  @media screen and (min-width: 1148px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   header &:hover,
   header &:focus {
     color: $accent-color;
@@ -133,6 +166,7 @@ header {
     @include display;
   }
 }
+
 .icon-mail {
   width: 16px;
   height: 11px;
@@ -144,11 +178,26 @@ header {
   margin-right: 10px;
 }
 .menu-button .icon-cross {
-  display: none;
+  opacity: 0;
 }
 .menu-button.is-open .icon-cross {
-  display: block;
+  opacity: 1;
 }
 .menu-button.is-open .icon-menu {
-  display: none;
+  opacity: 0;
+}
+.menu-conteiner {
+  opacity: 0;
+  position: absolute;
+  padding: 60px 90px;
+  top: 100%;
+  left: 0;
+  background-color: $primary-white-color;
+  &.is-open {
+    opacity: 1;
+  }
+  @media screen and (max-width: 480px) {
+    width: 480px;
+    text-align: center;
+  }
 }
