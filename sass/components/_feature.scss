@@ -1,25 +1,27 @@
 .feature {
   padding-top: 60px;
   padding-bottom: 60px;
-  // padding-top: 94px;
-  // padding-bottom: 94px;
   display: block;
   &-list {
-    @media screen and (max-widht: 768px) {
+    @media screen and (min-width: $tablet) {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
   &-main {
     display: block;
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 2 * 30px) / 2);
+    }
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 30px * 3) / 4);
+    }
     &:not(:last-child) {
       margin-bottom: 30px;
     }
-    @media screen and (max-widht: 1148px) {
-      width: calc((100% - 30px * 3) / 4);
-    }
   }
-
-  @media screen and (max-widht: 1148px) {
+  @media screen and (min-width: $tablet) {
     &-main:not(:last-child) {
       margin-right: 30px;
     }
@@ -28,19 +30,19 @@
     margin-bottom: 30px;
     background-color: $background-color;
     border-radius: 4px;
-    @media screen and (max-widht: 768px) {
-      width: 270px;
+    text-align: center;
+    @media screen and (max-width: 768px) {
       margin-bottom: 30px;
     }
   }
   &-icon {
     width: 70px;
     height: 70px;
-    margin: 25px 190px;
-    @media screen and (max-widht: 768px) {
+    margin: 25px auto;
+    @media screen and (max-width: 768px) {
       margin: 25px 142px;
     }
-    @media screen and (max-widht: 1148px) {
+    @media screen and (max-width: 1148px) {
       margin: 25px 100px;
     }
   }
@@ -51,6 +53,9 @@
     color: $title-nav-color;
     @include generalfont($line-height: 16px, $weight: bold, $size: 14px);
     text-transform: uppercase;
+    @media screen and (min-width: $tablet) {
+      text-align: start;
+    }
   }
   &-item {
     margin-top: 0px;

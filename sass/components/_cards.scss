@@ -1,9 +1,11 @@
 .card {
-  /* background-color: #2196f3; */
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
   &-link {
     display: inline-block;
+    width: 100%;
     position: relative;
   }
   &-img {
@@ -40,10 +42,17 @@
 }
 
 .card-box {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
   border: 1px solid $border-color;
+  @media screen and (max-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width: 468px) {
+    width: 450px;
+    margin-bottom: 30px;
+    margin-right: 0px;
+  }
 
   &:hover,
   &:focus {

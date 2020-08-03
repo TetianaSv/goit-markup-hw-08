@@ -1,4 +1,5 @@
 .footer {
+  width: 100%;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $footer-backgroung;
@@ -78,22 +79,6 @@
   }
   & .socialnet {
     margin-left: 10px;
-  }
-  &-copiright {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 18px;
-    padding-bottom: 21px;
-
-    color: rgba(255, 255, 255, 0.4);
-    text-align: center;
-    @include generalfont(
-      $line-height: 24px,
-      $weight: 400,
-      $size: 12px,
-      $letter-spacing: 0.03em
-    );
   }
   & .section {
     padding-bottom: 0px;
