@@ -2,12 +2,19 @@
   // display: flex;
   padding-left: 15px;
   padding-right: 15px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &-main {
     padding-top: 60px;
     padding-bottom: 60px;
     // padding-top: 94px;
     background-color: #f5f4fa;
   }
+
   &-name {
     margin-top: 0px;
     margin-bottom: 10px;
@@ -15,37 +22,70 @@
     color: $title-nav-color;
     @include generalfont($line-height: 16px, $weight: 500, $size: 19px);
   }
+
   &-prof {
     text-align: center;
     margin-top: 0px;
     margin-bottom: 16px;
   }
+
   &-img {
     display: block;
     margin-bottom: 30px;
     text-align: center;
   }
+
   &-item {
     text-align: center;
     @include generalfont($line-height: 16px, $weight: 400, $size: 19px);
   }
 }
+
 .team-list {
   padding-bottom: 24px;
   background-color: $primary-white-color;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
-  &:not(:last-child) {
-    margin-bottom: 30px;
+
+  @media screen and (max-width: 767px) {
+    &:not(last-child) {
+      margin-bottom: 30px;
+    }
   }
-  // &:not(:last-child) {
-  //   margin-right: 30px;
-  // }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+  }
+
+  @media screen and (min-width: $tablet) {
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 4 * 30px) / 4);
+  }
+
+  @media screen and (min-width: $desktop) {
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 0;
+    }
+  }
 }
+
 .social-links {
   @include display;
 }
+
 .social-icon {
   @include display;
   background-size: contain;

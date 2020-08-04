@@ -1,15 +1,24 @@
 .customers {
   display: block;
   padding-top: 60px;
-  // padding-top: 94px;
+  padding-bottom: 60px;
   &-main {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-between;
+
+    @media screen and (min-width: $desktop) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
   }
+
   &-list {
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
+
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 3 * 30px) / 3);
+    }
   }
 }
 .customers-item {

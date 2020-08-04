@@ -32,7 +32,6 @@ header {
     }
     @media screen and (min-width: $tablet) {
       display: flex;
-      height: 80px;
     }
   }
   &-link {
@@ -61,9 +60,6 @@ header {
   }
   &-accent {
     color: $primary-black-color;
-  }
-  header & {
-    margin-right: 81px;
   }
 }
 .current {

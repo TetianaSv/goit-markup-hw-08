@@ -5,65 +5,89 @@
   background-color: $footer-backgroung;
   color: $primary-white-color;
   &-site {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    // @include display;
-    // width: 1200px;
-    // height: 193px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    justify-content: center;
+
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
-  & b {
-    margin-top: 0px;
-    margin-bottom: 20px;
-  }
-  & .logo {
-    align-items: center;
-    margin-bottom: 20px;
-    // margin-bottom: 8px;
-    display: inline-block;
+  &-container {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 60px;
+
+      @media screen and (min-width: $desktop) {
+        margin-bottom: 0;
+        flex-grow: 1;
+      }
+    }
   }
   &-connection {
     flex-grow: 1;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
   }
+
   &-follow {
     margin-bottom: 60px;
     flex-grow: 1;
   }
+
   &-mailing {
-    flex-grow: 2;
+    @media screen and (min-width: $desktop) {
+      text-align: start;
+    }
   }
+
+  & b {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
+  & .logo {
+    align-items: center;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
   &-adress {
-    margin-bottom: 60px;
     display: flex;
     flex-direction: column;
   }
+
   & .logo-accent {
     color: $primary-white-color;
   }
+
   & .adress-mail {
     margin-bottom: 8px;
-    // margin-bottom: 9px;
     @include generalfont($line-height: 24px, $weight: 400, $size: 14px);
     color: $footer-adress-color;
     font-style: normal;
   }
+
   & .adress-tel {
     color: $footer-adress-color;
     @include generalfont($line-height: 24px, $weight: 400, $size: 14px);
     font-style: normal;
   }
+
   &-text {
     display: block;
     text-transform: uppercase;
   }
+
   &-button {
     width: 200px;
     height: 50px;
     margin-left: auto;
     margin-right: auto;
-    // margin-left: 10px;
     @include display;
     background-color: $accent-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -77,23 +101,31 @@
     );
     text-align: center;
   }
+
   & .socialnet {
     margin-left: 10px;
   }
+
   & .section {
     padding-bottom: 0px;
   }
+
   &-email {
-    width: 100%;
-    // width: 358px;
+    width: 450px;
     height: 50px;
     padding-left: 12px;
     margin-bottom: 20px;
     background: rgba(0, 0, 0, 0);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: $footer-adress-color;
+    @media screen and (min-width: $desktop) {
+      margin-right: 10px;
+      margin-bottom: 0;
+      width: 358px;
+    }
   }
 }
+
 .footer-links {
   display: flex;
   justify-content: center;
@@ -101,6 +133,7 @@
     margin-right: 10px;
   }
 }
+
 .footer-linkbox {
   @include display;
   background-color: $footer-linkbox-color;
@@ -116,13 +149,15 @@
     transition: $transition;
   }
 }
+
 .location {
   margin-bottom: 8px;
-  // margin-bottom: 9px;
   @include generalfont($line-height: 24px, $weight: 400, $size: 14px);
   font-style: normal;
   color: $primary-white-color;
 }
 .feedback {
-  // display: flex;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 }
