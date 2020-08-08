@@ -4,13 +4,16 @@
   padding-top: 90px;
   padding-bottom: 90px;
   &-menu {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-bottom: 50px;
-    // justify-content: center;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $tablet) {
+      justify-content: center;
+    }
   }
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 767px) {
     &-list {
       margin-bottom: 15px;
       margin-right: 8px;
@@ -24,9 +27,11 @@
       margin-bottom: 0;
     }
   }
-  // &-list:not(:last-child) {
-  //   margin-right: 8px;
-  // }
+  @media screen and (min-width: $tablet) {
+    &-list:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
 }
 .filter-button {
   padding: 6px 22px;

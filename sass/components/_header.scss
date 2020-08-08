@@ -4,23 +4,19 @@ header {
   background-color: $primary-white-color;
   width: 100%;
   border-bottom: 1px solid $border-color;
-  // @media screen and (min-width: 480px) {
-  //   width: 480px;
-  // }
-  // @media screen and (min-width: 768px) and (max-width: 1200px) {
-  //   width: 768px;
-  // }
 }
+
 .nav {
   padding-bottom: 0px;
   display: flex;
   align-items: center;
   position: relative;
   min-height: 60px;
-  // max-width: 100%;
+
   @media screen and (min-width: 1200px) {
     width: 1200px;
   }
+
   @media screen and (max-width: 767px) {
     justify-content: space-between;
   }
@@ -30,10 +26,12 @@ header {
       display: flex;
       flex-direction: column;
     }
+
     @media screen and (min-width: $tablet) {
       display: flex;
     }
   }
+
   &-link {
     position: relative;
     color: $title-nav-color;
@@ -44,12 +42,18 @@ header {
       $letter-spacing: 0.03em
     );
     transition: $transition;
+
+    @media screen and (max-width: 767px) {
+      padding-bottom: 8px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
   }
-  // @media screen and (min-width: 1200px) {
-  //   padding-top: 32px;
-  //   padding-bottom: 32px;
-  // }
 }
+
 .logo {
   color: $accent-color;
   @include logofont($size: 24px);
@@ -58,19 +62,21 @@ header {
   @media screen and (min-width: $desktop) {
     @include logofont($size: 26px);
   }
+
   &-accent {
     color: $primary-black-color;
   }
 }
+
 .current {
-  padding-bottom: 8px;
   color: $accent-color;
+
   &::after {
     content: " ";
     position: absolute;
     left: 0;
     bottom: 0;
-    margin-top: 8px;
+    // margin-top: 8px;
 
     display: block;
     width: 100%;
