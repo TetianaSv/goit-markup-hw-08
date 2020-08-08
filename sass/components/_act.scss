@@ -1,42 +1,44 @@
 .act {
-  & {
-    &-list {
-      display: flex;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    &-item {
-      position: relative;
-      & a {
-        display: block;
-      }
-    }
-    &-item:not(:last-child) {
-      margin-right: 30px;
-    }
-    &-item img {
+  padding-bottom: 60px;
+
+  &-list {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &-item {
+    position: relative;
+    & a {
       display: block;
     }
   }
-  .act-item-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    @include display;
-    @include generalfont(
-      $line-height: 16px,
-      $weight: 700,
-      $size: 14px,
-      $letter-spacing: 0.03em
-    );
-    line-height: 1.14;
-    text-transform: uppercase;
-    color: $primary-white-color;
-    background: rgba(47, 48, 58, 0.8);
+  &-item:not(:last-child) {
+    margin-right: 30px;
   }
-  @media screen and (max-width: $desktop) {
+  &-item img {
+    display: block;
+  }
+
+  @media screen and (max-width: 1147px) {
     display: none;
   }
+}
+
+.act-item-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  @include display;
+  @include generalfont(
+    $line-height: 16px,
+    $weight: 700,
+    $size: 14px,
+    $letter-spacing: 0.03em
+  );
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $primary-white-color;
+  background: rgba(47, 48, 58, 0.8);
 }

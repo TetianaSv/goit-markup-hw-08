@@ -7,23 +7,24 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      margin: -15px;
     }
   }
   &-main {
     display: block;
-    @media screen and (min-width: $tablet) {
-      width: calc((100% - 2 * 30px) / 2);
-    }
-    @media screen and (min-width: $desktop) {
-      width: calc((100% - 30px * 3) / 4);
-    }
     &:not(:last-child) {
       margin-bottom: 30px;
     }
-  }
-  @media screen and (min-width: $tablet) {
-    &-main:not(:last-child) {
-      margin-right: 30px;
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 30px * 3) / 4);
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
     }
   }
   &-img {
