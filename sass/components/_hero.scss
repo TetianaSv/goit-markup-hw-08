@@ -17,7 +17,7 @@
     (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi) {
     background-image: $hero-gradient,
-      url(.../images/Hero/hero-mobile-480-400@2x.jpg);
+      url(../images/Hero/hero-mobile-480-400@2x.jpg);
   }
 
   @media screen and (min-width: $tablet) and (max-width: 1147px) {
@@ -27,18 +27,18 @@
       (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi) {
       background-image: $hero-gradient,
-        url(.../images/hero/hero-tablet-768-400@2x.jpg);
+        url(../images/Hero/hero-tablet-768-400@2x.jpg);
     }
 
     @media screen and (min-width: $desktop) {
       background-image: $hero-gradient,
-        url(.../images/Hero/hero-desktop-1600-600.jpg);
+        url(../images/Hero/hero-desktop-1600-600.jpg);
 
       @media (min-resolution: 2dppx),
         (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi) {
         background-image: $hero-gradient,
-          url(.../images/hero/hero-desktop-1600-600@2x.jpg);
+          url(../images/Hero/hero-desktop-1600-600@2x.jpg);
       }
     }
   }

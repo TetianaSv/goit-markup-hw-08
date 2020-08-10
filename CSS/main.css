@@ -727,8 +727,8 @@ header .auth-item:focus {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(.../images/Hero/hero-mobile-480-400@2x.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(.../images/Hero/hero-mobile-480-400@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/Hero/hero-mobile-480-400@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/Hero/hero-mobile-480-400@2x.jpg);
   }
 }
 
@@ -741,22 +741,22 @@ header .auth-item:focus {
 
 @media screen and (min-width: 768px) and (max-width: 1147px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1147px) and (min-resolution: 2dppx), screen and (min-width: 768px) and (max-width: 1147px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1147px) and (min-resolution: 192dpi) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(.../images/hero/hero-tablet-768-400@2x.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(.../images/hero/hero-tablet-768-400@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/Hero/hero-tablet-768-400@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/Hero/hero-tablet-768-400@2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1147px) and (min-width: 1148px) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(.../images/Hero/hero-desktop-1600-600.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(.../images/Hero/hero-desktop-1600-600.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/Hero/hero-desktop-1600-600.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/Hero/hero-desktop-1600-600.jpg);
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1147px) and (min-width: 1148px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1147px) and (min-width: 1148px) and (min-resolution: 2dppx), screen and (min-width: 768px) and (max-width: 1147px) and (min-width: 1148px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1147px) and (min-width: 1148px) and (min-resolution: 192dpi) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(.../images/hero/hero-desktop-1600-600@2x.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(.../images/hero/hero-desktop-1600-600@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/Hero/hero-desktop-1600-600@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/Hero/hero-desktop-1600-600@2x.jpg);
   }
 }
 
