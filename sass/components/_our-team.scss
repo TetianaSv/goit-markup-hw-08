@@ -11,7 +11,6 @@
   &-main {
     padding-top: 60px;
     padding-bottom: 60px;
-    // padding-top: 94px;
     background-color: #f5f4fa;
   }
 
@@ -33,6 +32,9 @@
     display: block;
     margin-bottom: 30px;
     text-align: center;
+    & img {
+      min-width: 100%;
+    }
   }
 
   &-item {
@@ -49,7 +51,7 @@
   border-radius: 0px 0px 4px 4px;
 
   @media screen and (max-width: 767px) {
-    &:not(last-child) {
+    &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
@@ -64,7 +66,12 @@
       margin-bottom: 30px;
     }
   }
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: 1147px) {
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
     &:not(:last-child) {
       margin-right: 30px;
     }

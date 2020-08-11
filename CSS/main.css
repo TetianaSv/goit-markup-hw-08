@@ -1230,6 +1230,10 @@ header .auth-item:focus {
   text-align: center;
 }
 
+.team-img img {
+  min-width: 100%;
+}
+
 .team-item {
   text-align: center;
   font-family: Roboto, sans-serif;
@@ -1249,7 +1253,7 @@ header .auth-item:focus {
 }
 
 @media screen and (max-width: 767px) {
-  .team-list:not(last-child) {
+  .team-list:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -1266,7 +1270,13 @@ header .auth-item:focus {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1147px) {
+  .team-list:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1148px) {
   .team-list:not(:last-child) {
     margin-right: 30px;
   }
