@@ -307,7 +307,7 @@ p {
 }
 
 img {
-  min-width: 100%;
+  max-width: 100%;
 }
 
 .section {
@@ -935,7 +935,7 @@ header .auth-item:focus {
   background-color: #2196f3;
   border-color: transparent;
   background-origin: border-box;
-  background-image: url(../images/icon-check.svg);
+  background-image: url(../images/Icons/icon-check.svg);
   background-size: contain;
 }
 
@@ -1558,7 +1558,7 @@ header .auth-item:focus {
 }
 
 .footer-email {
-  width: 450px;
+  width: 100%;
   height: 50px;
   padding-left: 12px;
   margin-bottom: 20px;
